@@ -1,15 +1,18 @@
-name: Learning Actions
+name: Nodejs testing
 
 on: push
 
 jobs:
-    hello:
+    test-node:
         runs-on: ubuntu-latest
 
         steps:
-           - name: Show Date
-             run: date
-           - name: Show Files
-             run: ls
-           - name: Greetings
-             run: echo "Hello there guys, welcome back to ytf"
+           
+           - name: Download Repository
+             uses: actions/checkouts@v4
+           - name: Install nodejs
+             uses: actions/setup-node@v4
+             with:
+                node-version: 20
+           - name: Check node version
+             run: node -v
