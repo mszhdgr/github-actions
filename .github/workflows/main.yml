@@ -1,4 +1,4 @@
-name: My First Action
+name: Learning Actions
 
 on: push
 
@@ -7,5 +7,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-          - name: print message
-            run: echo "Hello from github actions"
+           - name: Show Date
+             run: date
+           - name: Show Files
+             run: ls
+           - name: Greetings
+             run: echo "Hello there guys, welcome back to ytf"
