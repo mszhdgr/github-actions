@@ -4,8 +4,8 @@ on: push
 
 jobs:
     great-jobs:
-    runs-on: ubuntu-latest
+      runs-on: ubuntu-latest
 
-    steps:
-        - name: you-no-amean
+      steps:
+        - name: Print Statement
           run: echo "chuchu blud you no dem way dear fum"
