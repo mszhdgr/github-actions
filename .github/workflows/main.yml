@@ -1,11 +1,30 @@
-name: Greatings blud yeah
+# name: Greatings blud yeah
+
+# on: push
+
+# jobs:
+#     great-jobs:
+#       runs-on: ubuntu-latest
+
+#       steps:
+#         - name: Print Statement
+#           run: echo "chuchu blud you no dem way dear fum"
+
+name: Nodejs Project
 
 on: push
 
 jobs:
-    great-jobs:
-      runs-on: ubuntu-latest
+    setup_nodejs:
+        runs-on: ubuntu-latest
 
-      steps:
-        - name: Print Statement
-          run: echo "chuchu blud you no dem way dear fum"
+        steps:
+           - name: Copy to empty repository
+             uses: github/checkout@v4
+           - name: Install Nodejs
+             uses: actions/setup-node@v4
+             with:
+                node-version: 20
+           - name: Run nodejs
+             run: echo "npm run dev"
+            
