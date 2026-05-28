@@ -1,30 +1,17 @@
-# name: Greatings blud yeah
-
-# on: push
-
-# jobs:
-#     great-jobs:
-#       runs-on: ubuntu-latest
-
-#       steps:
-#         - name: Print Statement
-#           run: echo "chuchu blud you no dem way dear fum"
-
-name: Nodejs Project
+name: Iris_classifier_model
 
 on: push
 
 jobs:
-    setup_nodejs:
+    classify_iris:
         runs-on: ubuntu-latest
-
         steps:
-           - name: Copy to empty repository
-             uses: actions/checkout@v4
-           - name: Install Nodejs
-             uses: actions/setup-node@v4
-             with:
-                node-version: 20
-           - name: Run nodejs
-             run: echo "npm run dev"
-            
+            - name: Copy to empty repo
+              uses: actions/checkout@v4
+            - name: Install python
+              uses: actions/setup-python@v5
+            - name: Install Dependancies
+              run: |
+                pip install -r requirements.txt
+            - name: Train Sklearn Model
+              run: python train.py
