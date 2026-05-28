@@ -1,0 +1,11 @@
+name: Greatings blud yeah
+
+on: push
+
+jobs:
+    great-jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: you-no-amean
+          run: echo "chuchu blud you no dem way dear fum"
