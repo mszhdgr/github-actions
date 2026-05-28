@@ -20,7 +20,7 @@ jobs:
 
         steps:
            - name: Copy to empty repository
-             uses: github/checkout@v4
+             uses: actions/checkout@v4
            - name: Install Nodejs
              uses: actions/setup-node@v4
              with:
