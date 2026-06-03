@@ -34,7 +34,7 @@ with mlflow.start_run():
     mlflow.log_metric("mae", mae)
     mlflow.sklearn.log_model(model, name="Rfr_model")
 
-    joblib.dump("models/Rfr_model.pkl")
+    joblib.dump(model, "models/Rfr_model.pkl")
 
     print("Model Training Complete...\n")
     print(f"R2_score: {R2Score:.4f} || mae: {mae:.4f} || mse: {mse:.4f} ")

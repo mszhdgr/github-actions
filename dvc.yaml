@@ -1,0 +1,8 @@
+stages:
+  train:
+    cmd: python train.py
+    deps: 
+     - data/calif_housing.csv
+     - train.py
+    outs:
+     - models/Rfr_model.pkl

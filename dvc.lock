@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: data/calif_housing.csv
+      hash: md5
+      md5: 76721284973b45697d9814a5566a8e5d
+      size: 2028526
+    - path: train.py
+      hash: md5
+      md5: 99be434710a8962bccb91c2b469fedb8
+      size: 1264
+    outs:
+    - path: models/Rfr_model.pkl
+      hash: md5
+      md5: 9a6c49ac60e939161e837734d38f71f2
+      size: 126348641
