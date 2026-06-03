@@ -16,6 +16,6 @@ jobs:
             - name: Install Dependancies
               run: |
                 pip install -r requirements.txt
-            - name: run dvc
+            - name: training model
               run: |
-                dvc repro
+                python train.py
